@@ -17,13 +17,21 @@ Tap it in the draft to see other versions, and play a preview to check. Live, ka
 
 Not everything is on Apple Music in every country. Tap the song and search by hand, or remove it.
 
-### My dashboard is missing older plays
+### My listening history is missing older plays
 
-Apple doesn't give apps your full history, so DialUpSoundz starts recording on the day you install it. To fill in earlier years, import Apple's play activity export. The [guide](../guide/#bring-in-your-past-listening) shows how.
+Apple doesn't give apps your full history, so DialUpSoundz starts recording on the day you install it. To fill in earlier years, import Apple's play activity export from the **Data** tab. The [guide](../guide/#bring-in-your-past-listening) shows how.
 
 ### Where did Settings go?
 
-Settings opens from the gear at the top of the **Listening** tab.
+Settings opens from the gear at the top of the **Data** tab. Recording, imports and exports are on the Data tab itself.
+
+### I bought the Data Layer on another iPhone
+
+Open Settings from the gear on the **Data** tab and tap **Restore Purchases**, signed in with the same Apple Account.
+
+### Paste Claude's research says it can't find anything
+
+Ask Claude to save the research, so it replies with a JSON block, then copy the whole reply before tapping **Paste Claude's research**.
 
 ## Contact
 

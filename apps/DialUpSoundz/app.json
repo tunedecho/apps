@@ -1,7 +1,7 @@
 {
   "name": "DialUpSoundz",
   "tagline": "Talk a playlist through with Claude, then save it to Apple Music.",
-  "summary": "Paste the list Claude gives you. DialUpSoundz finds every song on Apple Music, shows you what it matched, and saves the playlist to your library or plays it right away. It's also the start of a personal layer over Apple Music, with your listening history, your own ratings and an early dashboard, all kept on your iPhone.",
+  "summary": "Paste the list Claude gives you. DialUpSoundz finds every song on Apple Music, shows you what it matched, and saves the playlist to your library or plays it right away. That part is free. A one-time Data Layer unlock adds your own record of what you play and what you think of it: ratings, tags and liner notes, recommendations from a Claude Project, and your data to export, all kept on your iPhone.",
   "accent": "#c8102e",
   "accentDark": "#e5303f",
   "status": "coming-soon",
@@ -21,17 +21,17 @@
   ],
   "featuresHeading": "What it does",
   "features": [
-    { "title": "Playlists from Claude's list", "body": "Original studio versions are preferred over live, karaoke and cover versions, unless you asked for those." },
+    { "title": "Playlists from Claude's list", "body": "Original studio versions are preferred over live, karaoke and cover versions, unless you asked for those. Save it, or play it right here with AirPlay." },
     { "title": "Album lists", "body": "Ask Claude for whole albums instead of songs, and DialUpSoundz matches each one to the album on Apple Music." },
-    { "title": "Play in full", "body": "Play a draft or a saved playlist right in the app, with a now-playing bar and AirPlay." },
-    { "title": "Listen Later", "body": "Keep songs and albums you want to come back to. Open one to see its songs, mark it listened, and say how it was." },
-    { "title": "Your own ratings", "body": "Rate albums and songs from 1 to 5 stars, love them or mark them not for me, and add tags and notes. Hand Claude a summary so its picks lean your way." },
-    { "title": "Listening history and dashboard", "body": "The app records what you play from the day you install it, and can import years of Apple's play history. The dashboard is early and growing." }
+    { "title": "Rate fast", "body": "Work through your most played albums and songs, an artist's records, or anything on Apple Music: stars, love or not, your own tags, and liner notes. With the Data Layer." },
+    { "title": "Recommendations from Claude", "body": "Export your ratings and listening to a Claude Project, and ask for music that fits your taste. With the Data Layer." },
+    { "title": "Research and notes", "body": "Dig into an album with Claude and keep what you learn with it, along with why Claude recommended it. With the Data Layer." },
+    { "title": "Your data, yours to keep", "body": "Browse your listening history, Listen Later and ratings, look inside the JSON, and export all of it. The history and charts are early and growing. With the Data Layer." }
   ],
   "source": {
     "repo": "CrumpLabSandbox/DialUpSoundz",
-    "syncedCommit": "bdb4c5d5236cbbae5375330a0847529f10b326d9",
+    "syncedCommit": "026af86a90a9192fc5e809d5862076d04306f58d",
     "syncedAt": "2026-10-17",
-    "version": "0.2.0"
+    "version": "0.7.0"
   }
 }

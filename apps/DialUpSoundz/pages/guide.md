@@ -6,7 +6,7 @@ description: How to make playlists with Claude and bring in your past listening.
 ## Make a playlist with Claude
 
 1. In DialUpSoundz, open **Make › Copy prompt**.
-2. Paste it at the start of a chat on [claude.ai](https://claude.ai) or in the Claude app. If you'll make playlists often, create a Claude Project called DialUpSoundz and put the prompt in its instructions.
+2. Paste it at the start of a chat on [claude.ai](https://claude.ai) or in the Claude app. With the Data Layer, a Claude Project that knows your ratings does this better: see [Recommendations from Claude](#recommendations-from-claude).
 3. Talk it through: moods, eras, deep cuts, what to leave out.
 4. When you're happy, ask for the list. Claude replies with a block of JSON. Copy it.
 5. Switch to DialUpSoundz, tap **Paste**, then **Find on Apple Music**.
@@ -46,24 +46,53 @@ An **artist** brings in some of their best-known songs, and an **album** brings 
 
 Each saved playlist keeps the list it came from, under **Made**, so you can match it again later.
 
+## Free, and the Data Layer
+
+Making playlists and album lists is free. A one-time **Data Layer** unlock adds everything below: rating, recommendations from Claude, research, and your data. Your listening is recorded from the day you install the app either way, so it's all there when you unlock.
+
 ## Rate what you hear
 
-Open any album or song, from an album list, Listen Later or a draft, to rate it:
+**Rated › Rate a batch** shows one album or song at a time. Switch between **Albums** and **Songs** at the top. The source menu picks what to rate:
 
-- **Stars** from 1 to 5. Tap a star again to clear it.
-- **Love it** or mark it **not for me**.
-- **Tags**, a word or two that helps you find it again, like "late night" or "start here".
-- A **note**, for anything else.
+- **Most played:** the music you've played most and haven't rated, filterable by decade or genre.
+- **Your library:** saved albums you haven't rated.
+- **An artist:** their albums in release order, or their top songs.
+- **Search Apple Music:** anything else.
 
-In **Listen Later**, tap the circle next to an item when you've heard it, and the app asks how it was. The heart in the now-playing bar loves whatever's playing.
+On each card, tap the stars, love it or mark it **not for me**, tap your tags, add liner notes, then tap **Next**. To go faster, turn off **Options › Show tags and liner notes**, and a star saves and moves on. **Haven't heard** takes it out of the queue.
 
-The **Rated** tab lists everything you've rated. Filter it by albums or songs, by loved, or by tag.
+**Your tags** are offered every time you rate. Edit them in **Options › Edit your tags**, or **Rated › More › Manage tags**: add, reorder, rename or merge.
 
-### Give Claude your taste
+You can also rate from any album or song page, and in **Listen Later**: tap the circle when you've heard something, and the app asks how it was.
 
-Your ratings can steer Claude's suggestions. On the **Make** tab, tap **Copy prompt with my ratings** to copy the prompt and a summary of what you've rated, then paste both into a new chat. **Rated › Taste for Claude** shows the summary on its own.
+## Recommendations from Claude
 
-The summary lists the titles and artists you've rated, with your stars, tags and notes. It's only shared when you paste it somewhere.
+Give Claude your ratings and listening once, in a Claude Project, and every chat there recommends music that fits your taste.
+
+1. Open **Rated › Claude Project**.
+2. Make a project on claude.ai called DialUpSoundz, and paste in the instructions the app copies for you.
+3. Tap **Export for Claude**, save the file, and add it to the project's files. It holds your ratings, tags, notes, Listen Later, and counts of what you play most, never individual plays.
+4. Ask for something, like "five albums I haven't heard that I'd rate 5 stars". When you're happy, ask for the list and paste it on the **Make** tab.
+
+Export again now and then as your ratings grow, and replace the old file.
+
+## Research an album or song
+
+Every album and song page has **Research with Claude**:
+
+1. Tap **Copy a research prompt**, then **Open Claude**, and paste it.
+2. Dig in for as long as you like.
+3. Ask Claude to save it, copy its reply, and tap **Paste Claude's research**.
+
+The summary, facts, what to listen for and what to hear next are kept with that album or song. Claude's lists also say what each song or album is, and that's kept when you save them. Find everything under **Data › Claude's notes**.
+
+## Your data
+
+The **Data** tab is everything the app has built up:
+
+- **Browse:** your listening history by artist, album or song. Tap one to play or rate it.
+- **Explore:** loved and 5-star lists, tags, Claude's notes, charts, and the JSON underneath.
+- **Export everything:** your plays, ratings, Listen Later, playlists and notes as one JSON file, to keep or use elsewhere.
 
 ## Bring in your past listening
 
@@ -72,6 +101,6 @@ Apple doesn't give apps your full play history, so DialUpSoundz records it from 
 1. Go to [privacy.apple.com](https://privacy.apple.com), choose **Request a copy of your data**, and tick **Apple Media Services information**.
 2. Apple emails you when it's ready, usually within a few days.
 3. Unzip it in the Files app. In the Apple Music Activity folder, find **Apple Music - Play History Daily Tracks.csv** or **Apple Music Play Activity.csv**.
-4. In DialUpSoundz, open the **Listening** tab, tap the gear for **Settings**, then **Import play activity file** and choose it.
+4. In DialUpSoundz, open the **Data** tab, tap **Import Apple's play history**, and choose it.
 
 Importing replaces the app's estimated plays for the same dates with Apple's exact ones. Importing the same file twice doesn't count anything twice.
