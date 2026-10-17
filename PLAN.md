@@ -107,7 +107,7 @@ Written from the DialUpSoundz README and PLAN:
 - [x] Shared styles and templates from the main site's design tokens.
 - [x] Build script with the requirements check, redirects and 404.
 - [x] Deploy workflow.
-- [x] DialUpSoundz folder and pages. Support contact: appsupport@tunedecho.com.
+- [x] DialUpSoundz folder and pages. Support contact: info@tunedecho.com.
 - [x] README: how to add an app.
 - [x] Pages is on for this repository. Its source must be "GitHub Actions".
 - [ ] DialUpSoundz screenshots, once there are some from a device.

@@ -3,6 +3,17 @@ title: Support
 description: Get help with DialUpSoundz.
 ---
 
+## About support
+
+DialUpSoundz is an experimental app made by one person at Tuned Echo Systems. It's offered as is: I fix what I can, when I can, but I can't promise a reply, a fix, or a timeline. Use it at your own risk.
+
+- **Questions and bug reports:** [{{supportEmail}}](mailto:{{supportEmail}}?subject=DialUpSoundz). I read everything, even when I can't answer.
+- **Purchases and refunds** are handled by Apple, at [reportaproblem.apple.com](https://reportaproblem.apple.com).
+- **Your data lives only on your iPhone,** so I can't recover it if something goes wrong. Use **Data › Export everything** now and then as a backup.
+- **Things will change.** The app depends on Apple Music and on Claude, and either can change in ways that break something here. Features may come and go while it's experimental.
+
+The app is covered by Apple's [standard license agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
+
 ## Common questions
 
 ### Saving a playlist doesn't work
@@ -32,7 +43,3 @@ Open Settings from the gear on the **Data** tab and tap **Restore Purchases**, s
 ### Paste Claude's research says it can't find anything
 
 Ask Claude to save the research, so it replies with a JSON block, then copy the whole reply before tapping **Paste Claude's research**.
-
-## Contact
-
-Email [{{supportEmail}}](mailto:{{supportEmail}}?subject=DialUpSoundz). Say which iPhone and iOS version you're using, and what happened. If a pasted list didn't match well, include the list.

@@ -10,7 +10,7 @@
   "requires": "iOS 17 or later · Apple Music",
   "stores": ["apple"],
   "links": { "appStore": null, "testFlight": null },
-  "supportEmail": "appsupport@tunedecho.com",
+  "supportEmail": "info@tunedecho.com",
   "privacy": "custom",
   "stepsHeading": "From a chat to a playlist",
   "steps": [
