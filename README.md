@@ -48,6 +48,7 @@ apps/MyApp/
 | `privacy` | `"no-data"` uses the shared policy in `site/defaults/privacy-no-data.md`, for apps that collect nothing. Anything else means you write `pages/privacy.md`. |
 | `steps`, `stepsHeading` | "How it works", a list of `{ "title", "body" }`. |
 | `features`, `featuresHeading` | "What it does", a list of `{ "title", "body" }`. |
+| `source` | The app's repository and the commit the pages describe: `repo`, `syncedCommit`, `syncedAt`, `version`. Kept up to date by the `sync-app` skill. |
 | `order` | Optional number to pin an app's place on the index. Otherwise available apps come first, then beta, coming soon and projects, each by name. |
 
 ### Markdown pages
@@ -64,6 +65,12 @@ order: 30
 ```
 
 All fields are optional. `{{name}}`, `{{supportEmail}}` and any other `app.json` text field can be used in the text. Headings get ids, so you can link to `guide/#some-heading`.
+
+## Update an app's pages from its repository
+
+When a version of an app is ready, run `/sync-app <AppName>` in Claude Code here, or `/publish-website` in the app's own repository. The skill (`.claude/skills/sync-app/SKILL.md`) reads what changed in the app since `source.syncedCommit`, updates the changelog, features, guide and support pages, builds, and pushes. If the change touches what data the app uses or where it goes, it shows you the privacy policy change and waits for your approval first.
+
+To link a new app, add a `source` block to its `app.json`, and copy `.claude/skills/publish-website/SKILL.md` from the DialUpSoundz repository into the app's repository, changing the app name.
 
 ## Store requirements
 
@@ -101,3 +108,4 @@ On macOS, local builds skip the lowercase redirect folders, because the file sys
 | `site/assets/` | The Tuned Echo seal, used as the index favicon. |
 | `scripts/build.mjs` | Builds `_site/`. |
 | `scripts/serve.mjs` | Local preview server. |
+| `.claude/skills/sync-app/` | How Claude updates an app's pages from its repository. |

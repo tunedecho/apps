@@ -27,5 +27,11 @@
     { "title": "Listen Later", "body": "Keep songs and albums you want to come back to in one place, and add them to your library when you're ready." },
     { "title": "Listening history", "body": "From the day you install it, the app records what you play. Import Apple's play activity export to bring in years of past listening." },
     { "title": "Dashboard", "body": "Top artists, songs and albums by week, month, year or all time, plays over time, release decades, genres, songs to rediscover, and more." }
-  ]
+  ],
+  "source": {
+    "repo": "CrumpLabSandbox/DialUpSoundz",
+    "syncedCommit": "e7e6006510494f0f52be3a8c047c08d38528f52a",
+    "syncedAt": "2026-10-17",
+    "version": "0.1.0"
+  }
 }

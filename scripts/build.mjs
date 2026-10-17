@@ -81,6 +81,9 @@ function validate({ app, pages }) {
   if (app.status === 'available' && !app.links?.appStore) problems.push('status "available" needs links.appStore');
   if (app.status === 'beta' && !app.links?.testFlight) problems.push('status "beta" needs links.testFlight');
   if (!fs.existsSync(path.join(app.dir, 'icon.png'))) problems.push('icon.png is missing');
+  if (app.source && !(app.source.repo && /^[0-9a-f]{7,40}$/.test(app.source.syncedCommit || ''))) {
+    problems.push('"source" needs "repo" and a "syncedCommit" SHA (see .claude/skills/sync-app/SKILL.md)');
+  }
   if (!/^[A-Za-z0-9][A-Za-z0-9-]*$/.test(app.slug)) problems.push('folder name may only use letters, numbers and hyphens');
 
   for (const store of app.stores || []) {
