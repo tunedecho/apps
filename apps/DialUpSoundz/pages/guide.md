@@ -1,19 +1,19 @@
 ---
 title: Guide
-description: How to make playlists with Claude and bring in your past listening.
+description: How to make playlists in your chat app, ask the Operator, and bring in your past listening.
 ---
 
-## Make a playlist with Claude
+## Make a playlist in your chat app
 
 1. In DialUpSoundz, open **Make › Copy prompt**.
-2. Paste it at the start of a chat on [claude.ai](https://claude.ai) or in the Claude app. With the Data Layer, a Claude Project that knows your ratings does this better: see [Recommendations from Claude](#recommendations-from-claude).
+2. Paste it at the start of a chat in your chat app. It works with chat assistants like Claude, ChatGPT and Gemini; pick yours in **Settings › Your chat app**, and the Open buttons go to it. With the Data Layer, the Operator, an assistant that knows your ratings, does this better: see [Ask the Operator](#ask-the-operator).
 3. Talk it through: moods, eras, deep cuts, what to leave out.
-4. When you're happy, ask for the list. Claude replies with a block of JSON. Copy it.
+4. When you're happy, ask for the list. The assistant replies with a block of JSON. Copy it.
 5. Switch to DialUpSoundz, tap **Paste**, then **Find on Apple Music**.
 
 ### What the list can look like
 
-The prompt asks Claude for this shape:
+The prompt asks for this shape:
 
 ```json
 {
@@ -35,7 +35,7 @@ Marvin Gaye - Inner City Blues
 Curtis Mayfield
 ```
 
-An **artist** brings in some of their best-known songs, and an **album** brings in tracks from it. For a list of whole albums, ask Claude for an album list instead, or switch the list to albums on the Make tab.
+An **artist** brings in some of their best-known songs, and an **album** brings in tracks from it. For a list of whole albums, ask for an album list instead, or switch the list to albums on the Make tab.
 
 ## Review before saving
 
@@ -48,7 +48,7 @@ Each saved playlist keeps the list it came from, under **Made**, so you can matc
 
 ## Free, and the Data Layer
 
-Making playlists and album lists is free. A one-time **Data Layer** unlock adds everything below: rating, recommendations from Claude, research, and your data. Your listening is recorded from the day you install the app either way, so it's all there when you unlock.
+Making playlists and album lists is free. A one-time **Data Layer** unlock adds everything below: rating, the Operator, research, and your data. Your listening is recorded from the day you install the app either way, so it's all there when you unlock.
 
 ## Rate what you hear
 
@@ -65,34 +65,35 @@ On each card, tap the stars, love it or mark it **not for me**, tap your tags, a
 
 You can also rate from any album or song page, and in **Listen Later**: tap the circle when you've heard something, and the app asks how it was.
 
-## Recommendations from Claude
+## Ask the Operator
 
-Give Claude your ratings and listening once, in a Claude Project, and every chat there recommends music that fits your taste.
+The Operator is your chat assistant, set up once with your ratings and listening, so every chat recommends music that fits your taste.
 
-1. Open **Rated › Claude Project**.
-2. Make a project on claude.ai called DialUpSoundz, and paste in the instructions the app copies for you.
-3. Tap **Export for Claude**, save the file, and add it to the project's files. It holds your ratings, tags, notes, Listen Later, and counts of what you play most, never individual plays.
+1. Open **Rated › Operator setup**.
+2. In your chat app, make a project or saved assistant called DialUpSoundz. Most chat apps have one: Claude and ChatGPT call them Projects, and Gemini calls them Gems. Paste in the instructions the app copies for you.
+3. Tap **Export your music profile**, save the file, and add it to the project's files. It holds your ratings, tags, notes, Listen Later, and counts of what you play most, never individual plays.
 4. Ask for something, like "five albums I haven't heard that I'd rate 5 stars". When you're happy, ask for the list and paste it on the **Make** tab.
 
-Export again now and then as your ratings grow, and replace the old file.
+Export the music profile again now and then as your ratings grow, and replace the old file.
 
 ## Research an album or song
 
-Every album and song page has **Research with Claude**:
+Every album and song page has **Research**:
 
-1. Tap **Copy a research prompt**, then **Open Claude**, and paste it.
-2. Dig in for as long as you like.
-3. Ask Claude to save it, copy its reply, and tap **Paste Claude's research**.
+1. Tap **Copy a research prompt**, then open your chat app, and paste it.
+2. Dig in with the Operator for as long as you like.
+3. Ask it to save the research, copy its reply, and tap **Paste the research**.
 
-The summary, facts, what to listen for and what to hear next are kept with that album or song. Claude's lists also say what each song or album is, and that's kept when you save them. Find everything under **Data › Claude's notes**.
+The summary, facts, what to listen for and what to hear next are kept with that album or song. The Operator's lists also say what each song or album is, and that's kept when you save them. Find everything under **Data › Operator's notes**.
 
 ## Your data
 
 The **Data** tab is everything the app has built up:
 
 - **Browse:** your listening history by artist, album or song. Tap one to play or rate it.
-- **Explore:** loved and 5-star lists, tags, Claude's notes, charts, and the JSON underneath.
+- **Explore:** loved and 5-star lists, tags, Operator's notes, charts, and the JSON underneath.
 - **Export everything:** your plays, ratings, Listen Later, playlists and notes as one JSON file, to keep or use elsewhere.
+- **Import an export:** bring an export back, to move to a new iPhone or restore a backup. Anything already there isn't duplicated.
 
 ## Bring in your past listening
 

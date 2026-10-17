@@ -1,7 +1,7 @@
 {
   "name": "DialUpSoundz",
-  "tagline": "Talk a playlist through with Claude, then save it to Apple Music.",
-  "summary": "Paste the list Claude gives you. DialUpSoundz finds every song on Apple Music, shows you what it matched, and saves the playlist to your library or plays it right away. That part is free. A one-time Data Layer unlock adds your own record of what you play and what you think of it: ratings, tags and liner notes, recommendations from a Claude Project, and your data to export, all kept on your iPhone.",
+  "tagline": "Talk a playlist through in your chat app, then save it to Apple Music.",
+  "summary": "Paste the list your chat assistant gives you. DialUpSoundz finds every song on Apple Music, shows you what it matched, and saves the playlist to your library or plays it right away. That part is free. A one-time Data Layer unlock adds your own record of what you play and what you think of it: ratings, tags and liner notes, recommendations from the Operator, and your data to export and import, all kept on your iPhone.",
   "accent": "#c8102e",
   "accentDark": "#e5303f",
   "status": "coming-soon",
@@ -14,24 +14,24 @@
   "privacy": "custom",
   "stepsHeading": "From a chat to a playlist",
   "steps": [
-    { "title": "Talk it through with Claude", "body": "Copy the DialUpSoundz prompt into a chat with Claude. Talk about moods, eras, deep cuts and what to leave out, then ask for the list." },
-    { "title": "Paste the list", "body": "Copy Claude's reply and paste it into DialUpSoundz. A plain list such as Artist - Song, one per line, works too." },
+    { "title": "Talk it through in your chat app", "body": "Copy the DialUpSoundz prompt into a chat with your assistant. It works with chat assistants like Claude, ChatGPT and Gemini. Talk about moods, eras, deep cuts and what to leave out, then ask for the list." },
+    { "title": "Paste the list", "body": "Copy the reply and paste it into DialUpSoundz. A plain list such as Artist - Song, one per line, works too." },
     { "title": "Review the matches", "body": "Each song, artist or album is looked up on Apple Music. Anything that needs a look is marked, and you can swap versions, preview, reorder or remove." },
     { "title": "Save", "body": "Nothing is saved until you tap Save. The playlist goes to your Apple Music library with its name and description." }
   ],
   "featuresHeading": "What it does",
   "features": [
-    { "title": "Playlists from Claude's list", "body": "Original studio versions are preferred over live, karaoke and cover versions, unless you asked for those. Save it, or play it right here with AirPlay." },
-    { "title": "Album lists", "body": "Ask Claude for whole albums instead of songs, and DialUpSoundz matches each one to the album on Apple Music." },
+    { "title": "Playlists from a chat", "body": "Original studio versions are preferred over live, karaoke and cover versions, unless you asked for those. Save it, or play it right here with AirPlay." },
+    { "title": "Album lists", "body": "Ask for whole albums instead of songs, and DialUpSoundz matches each one to the album on Apple Music." },
     { "title": "Rate fast", "body": "Work through your most played albums and songs, an artist's records, or anything on Apple Music: stars, love or not, your own tags, and liner notes. With the Data Layer." },
-    { "title": "Recommendations from Claude", "body": "Export your ratings and listening to a Claude Project, and ask for music that fits your taste. With the Data Layer." },
-    { "title": "Research and notes", "body": "Dig into an album with Claude and keep what you learn with it, along with why Claude recommended it. With the Data Layer." },
-    { "title": "Your data, yours to keep", "body": "Browse your listening history, Listen Later and ratings, look inside the JSON, and export all of it. The history and charts are early and growing. With the Data Layer." }
+    { "title": "Ask the Operator", "body": "Set up your chat assistant once with your ratings and listening, and ask it for music that fits your taste. With the Data Layer." },
+    { "title": "Research and notes", "body": "Dig into an album with the Operator and keep what you learn with it, along with why it was recommended. With the Data Layer." },
+    { "title": "Your data, yours to keep", "body": "Browse your listening history, Listen Later and ratings, look inside the JSON, and export or import all of it. The history and charts are early and growing. With the Data Layer." }
   ],
   "source": {
     "repo": "CrumpLabSandbox/DialUpSoundz",
-    "syncedCommit": "026af86a90a9192fc5e809d5862076d04306f58d",
+    "syncedCommit": "03fcf2c6c7bd7ba66ff002a1a5324609630cd71a",
     "syncedAt": "2026-10-17",
-    "version": "0.7.0"
+    "version": "0.9.0"
   }
 }

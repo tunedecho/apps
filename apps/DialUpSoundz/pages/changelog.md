@@ -3,11 +3,20 @@ title: Changelog
 description: What's new in each version of DialUpSoundz.
 ---
 
+## 0.9.0 · In development
+
+- DialUpSoundz now speaks of your chat app rather than one brand: it works with chat assistants like Claude, ChatGPT and Gemini. Pick yours in **Settings › Your chat app**, and the Open buttons go to it.
+- Meet **the Operator**: your chat assistant, set up with your ratings and listening. **Operator setup** replaces the old project setup screen, and **Operator's notes** and the **music profile** replace their old names.
+
+## 0.8.0 · In development
+
+- **Import an export.** Bring a file from Export everything back in, to move to a new iPhone or restore a backup. Nothing already there is duplicated, and your tags come across too.
+
 ## 0.7.0 · In development
 
-- Claude's lists now say what each song or album is, as well as why it fits. Both are kept with the music when you save a playlist or save albums to Listen Later.
-- **Research with Claude** on any album or song page. Dig in with Claude, then paste its summary back to keep it with that album: facts, what to listen for, and what to hear next.
-- **Data › Claude's notes** gathers everything Claude has told you, searchable.
+- Lists from your chat app now say what each song or album is, as well as why it fits. Both are kept with the music when you save a playlist or save albums to Listen Later.
+- **Research** on any album or song page. Dig in with your chat assistant, then paste its summary back to keep it with that album: facts, what to listen for, and what to hear next.
+- **Data › Operator's notes** gathers everything your assistant has told you, searchable.
 
 ## 0.6.0 · In development
 
@@ -17,8 +26,8 @@ description: What's new in each version of DialUpSoundz.
 
 ## 0.5.0 · In development
 
-- **Recommendations from Claude.** Set up a Claude Project with your ratings and listening, and ask it for music that fits your taste. It answers with a list the app reads.
-- **Export for Claude** makes the file for the project: your ratings, tags, Listen Later, and counts of what you play most.
+- **Recommendations from your chat assistant.** Set up a project in your chat app with your ratings and listening, and ask it for music that fits your taste. It answers with a list the app reads.
+- A **music profile** export makes the file for the project: your ratings, tags, Listen Later, and counts of what you play most.
 - This replaces copying a summary of your ratings with the prompt.
 
 ## 0.4.0 · In development
@@ -38,14 +47,14 @@ description: What's new in each version of DialUpSoundz.
 - A new **Rated** tab lists everything you've rated, filtered by albums or songs, loved, or tag.
 - Love what's playing with the heart in the now-playing bar.
 - Listen Later items open as full pages: an album shows its songs, and a song links to its album. Mark one listened and the app asks how it was.
-- Hand Claude your taste: **Make › Copy prompt with my ratings** copies the prompt together with a summary of your ratings.
+- Hand your chat assistant your taste: **Make › Copy prompt with my ratings** copies the prompt together with a summary of your ratings.
 - Settings now opens from the gear on the **Listening** tab.
 
 ## 0.1.0 · In development
 
 The first version, not yet released.
 
-- Make a playlist from Claude's list, or a plain list of songs, artists and albums.
+- Make a playlist from your chat app's list, or a plain list of songs, artists and albums.
 - Review matches before saving: swap versions, preview, reorder, remove, and search by hand.
 - Album lists, matched to whole albums on Apple Music.
 - Play drafts and saved playlists in full, with a now-playing bar and AirPlay.

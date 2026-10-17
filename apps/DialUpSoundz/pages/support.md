@@ -10,11 +10,19 @@ DialUpSoundz is an experimental app made by one person at Tuned Echo Systems. It
 - **Questions and bug reports:** [{{supportEmail}}](mailto:{{supportEmail}}?subject=DialUpSoundz). I read everything, even when I can't answer.
 - **Purchases and refunds** are handled by Apple, at [reportaproblem.apple.com](https://reportaproblem.apple.com).
 - **Your data lives only on your iPhone,** so I can't recover it if something goes wrong. Use **Data › Export everything** now and then as a backup.
-- **Things will change.** The app depends on Apple Music and on Claude, and either can change in ways that break something here. Features may come and go while it's experimental.
+- **Things will change.** The app depends on Apple Music and on your chat app, and either can change in ways that break something here. Features may come and go while it's experimental.
 
 The app is covered by Apple's [standard license agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
 
 ## Common questions
+
+### Which chat apps work?
+
+Any chat assistant that can follow instructions and reply with a block of JSON, such as Claude, ChatGPT and Gemini. Pick yours in **Settings › Your chat app**.
+
+### Moving to a new iPhone
+
+On the old one, open **Data › Export everything** and save the file. On the new one, open **Data › Import an export** and choose it. Your library's play counts come back by themselves.
 
 ### Saving a playlist doesn't work
 
@@ -40,6 +48,6 @@ Settings opens from the gear at the top of the **Data** tab. Recording, imports 
 
 Open Settings from the gear on the **Data** tab and tap **Restore Purchases**, signed in with the same Apple Account.
 
-### Paste Claude's research says it can't find anything
+### Paste the research says it can't find anything
 
-Ask Claude to save the research, so it replies with a JSON block, then copy the whole reply before tapping **Paste Claude's research**.
+Ask the Operator to save the research, so it replies with a JSON block, then copy the whole reply before tapping **Paste the research**.
