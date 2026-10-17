@@ -1,7 +1,7 @@
 {
   "name": "DialUpSoundz",
   "tagline": "Talk a playlist through with Claude, then save it to Apple Music.",
-  "summary": "Paste the list Claude gives you. DialUpSoundz finds every song on Apple Music, shows you what it matched, and saves the playlist to your library. It also keeps your listening history on your iPhone and turns it into a dashboard.",
+  "summary": "Paste the list Claude gives you. DialUpSoundz finds every song on Apple Music, shows you what it matched, and saves the playlist to your library or plays it right away. It's also the start of a personal layer over Apple Music, with your listening history, your own ratings and an early dashboard, all kept on your iPhone.",
   "accent": "#c8102e",
   "accentDark": "#e5303f",
   "status": "coming-soon",
@@ -24,14 +24,14 @@
     { "title": "Playlists from Claude's list", "body": "Original studio versions are preferred over live, karaoke and cover versions, unless you asked for those." },
     { "title": "Album lists", "body": "Ask Claude for whole albums instead of songs, and DialUpSoundz matches each one to the album on Apple Music." },
     { "title": "Play in full", "body": "Play a draft or a saved playlist right in the app, with a now-playing bar and AirPlay." },
-    { "title": "Listen Later", "body": "Keep songs and albums you want to come back to in one place, and add them to your library when you're ready." },
-    { "title": "Listening history", "body": "From the day you install it, the app records what you play. Import Apple's play activity export to bring in years of past listening." },
-    { "title": "Dashboard", "body": "Top artists, songs and albums by week, month, year or all time, plays over time, release decades, genres, songs to rediscover, and more." }
+    { "title": "Listen Later", "body": "Keep songs and albums you want to come back to. Open one to see its songs, mark it listened, and say how it was." },
+    { "title": "Your own ratings", "body": "Rate albums and songs from 1 to 5 stars, love them or mark them not for me, and add tags and notes. Hand Claude a summary so its picks lean your way." },
+    { "title": "Listening history and dashboard", "body": "The app records what you play from the day you install it, and can import years of Apple's play history. The dashboard is early and growing." }
   ],
   "source": {
     "repo": "CrumpLabSandbox/DialUpSoundz",
-    "syncedCommit": "e7e6006510494f0f52be3a8c047c08d38528f52a",
+    "syncedCommit": "bdb4c5d5236cbbae5375330a0847529f10b326d9",
     "syncedAt": "2026-10-17",
-    "version": "0.1.0"
+    "version": "0.2.0"
   }
 }

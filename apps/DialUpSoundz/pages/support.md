@@ -21,6 +21,10 @@ Not everything is on Apple Music in every country. Tap the song and search by ha
 
 Apple doesn't give apps your full history, so DialUpSoundz starts recording on the day you install it. To fill in earlier years, import Apple's play activity export. The [guide](../guide/#bring-in-your-past-listening) shows how.
 
+### Where did Settings go?
+
+Settings opens from the gear at the top of the **Listening** tab.
+
 ## Contact
 
 Email [{{supportEmail}}](mailto:{{supportEmail}}?subject=DialUpSoundz). Say which iPhone and iOS version you're using, and what happened. If a pasted list didn't match well, include the list.
