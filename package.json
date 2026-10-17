@@ -1,0 +1,17 @@
+{
+  "name": "tunedecho-apps",
+  "private": true,
+  "type": "module",
+  "description": "Pages for Tuned Echo apps, served at tunedecho.com/apps/",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "marked": "18.1.1"
+  }
+}

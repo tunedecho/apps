@@ -36,9 +36,12 @@ apps/
     index.html               optional: if present, used instead of the generated landing page
 site/
   styles.css                 shared tokens and components, taken from the main site
-  templates/                 index, app, page, privacy, support, redirect, 404
+  templates.mjs              index, app, page, redirect and 404 templates
+  site.json                  site address, base path, index text
   requirements.json          what each store needs (pages and app.json fields)
+  defaults/                  shared support page, and a privacy policy for apps that collect nothing
 scripts/build.mjs            reads apps/*, checks requirements, writes _site/
+scripts/serve.mjs            local preview at http://localhost:8080/apps/
 .github/workflows/deploy.yml build, then deploy to Pages on every push to main
 ```
 
@@ -53,7 +56,7 @@ scripts/build.mjs            reads apps/*, checks requirements, writes _site/
   "platforms": ["iPhone"],
   "stores": ["apple"],
   "links": { "appStore": null, "testFlight": null },
-  "supportEmail": "...",
+  "supportEmail": "appsupport@tunedecho.com",
   "features": [
     { "title": "Make a playlist from Claude's list", "body": "..." }
   ]
@@ -101,16 +104,12 @@ Written from the DialUpSoundz README and PLAN:
 
 ## Steps
 
-1. Shared styles and templates from the main site's design tokens.
-2. Build script with the requirements check, redirects and 404.
-3. Deploy workflow.
-4. DialUpSoundz folder and pages.
-5. README: how to add an app.
-6. Turn on Pages for this repository (manual, in GitHub settings).
-7. Optional: add an "Apps" link to the main site's navigation in `tunedecho/tunedecho.github.io`.
-
-## Open questions
-
-- Support contact address to publish on the support and privacy pages.
-- Whether to add the "Apps" link to the main site now.
-- Screenshots of DialUpSoundz, when you have them.
+- [x] Shared styles and templates from the main site's design tokens.
+- [x] Build script with the requirements check, redirects and 404.
+- [x] Deploy workflow.
+- [x] DialUpSoundz folder and pages. Support contact: appsupport@tunedecho.com.
+- [x] README: how to add an app.
+- [x] Pages is on for this repository. Its source must be "GitHub Actions".
+- [ ] DialUpSoundz screenshots, once there are some from a device.
+- [ ] Switch DialUpSoundz to `beta` or `available` with its link when it ships.
+- [ ] Later, not now: an "Apps" link in the main site's navigation in `tunedecho/tunedecho.github.io`.

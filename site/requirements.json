@@ -1,0 +1,7 @@
+{
+  "apple": {
+    "label": "Apple App Store",
+    "pages": ["privacy", "support"],
+    "fields": ["supportEmail"]
+  }
+}
