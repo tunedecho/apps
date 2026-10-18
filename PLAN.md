@@ -80,7 +80,7 @@ The build fails, naming the app and what is missing, when an app lists a store a
 
 ## Pages
 
-- **`/apps/`**: wordmark header linking back to `tunedecho.com`, then a card per app with icon, name, tagline and status, sorted with available apps first.
+- **`/apps/`**: the same header menu as `tunedecho.com` (Services, Method, Work, Apps, About, Story, Contact; section links go to the home page), then a card per app with icon, name, tagline and status, sorted with available apps first.
 - **`/apps/<App>/`**: hero with icon, name, tagline and the status button. Then features, screenshots if any, the content of `pages/index.md`, and links to the other pages.
 - **`/apps/<App>/guide/`**, **`/changelog/`**, **`/privacy/`**, **`/support/`**: Markdown pages in the same frame, with a small app header and a sub-navigation.
 - **`/apps/<lowercase>/`**: redirect to the canonical URL, generated only when the lowercase name differs.

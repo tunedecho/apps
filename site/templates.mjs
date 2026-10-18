@@ -42,6 +42,15 @@ function accentStyle(app) {
   return `<style>:root{--accent:${app.accent}}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--accent:${dark}}}:root[data-theme="dark"]{--accent:${dark}}</style>`;
 }
 
+// The same menu as tunedecho.com, so the two sites read as one. Section links go to the home page; Apps stays here.
+const MAIN_NAV = [['Services', '#services'], ['Method', '#method'], ['Work', '#work'], ['Apps', null], ['About', '#about'], ['Story', '#story'], ['Contact', '#contact']];
+function mainNav(site, path) {
+  return MAIN_NAV.map(([label, hash]) => {
+    if (!hash) return `      <li><a href="${site.base}/"${path === site.base + '/' ? ' aria-current="page"' : ''}>${label}</a></li>`;
+    return `      <li><a href="${esc(site.home + hash)}">${label}</a></li>`;
+  }).join('\n');
+}
+
 function layout({ site, title, description, path, app, icon, body }) {
   const url = site.url + path;
   return `<!doctype html>
@@ -67,8 +76,7 @@ ${accentStyle(app)}
   <nav class="nav" aria-label="Primary">
     <a class="brand" href="${esc(site.home)}">${brand}</a>
     <ul>
-      <li><a href="${site.base}/"${path === site.base + '/' ? ' aria-current="page"' : ''}>Apps</a></li>
-      <li><a href="${esc(site.home)}">Tuned Echo Systems</a></li>
+${mainNav(site, path)}
     </ul>
   </nav>
 </header>
