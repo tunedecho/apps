@@ -40,6 +40,14 @@ Not everything is on Apple Music in every country. Tap the song and search by ha
 
 Apple doesn't give apps your full history, so DialUpSoundz starts recording on the day you install it. To fill in earlier years, import Apple's play activity export from the **Data** tab. The [guide](../guide/#bring-in-your-past-listening) shows how.
 
+### Where did the Made tab go?
+
+It's now **Playlists**, with everything that was there and more. Older playlists can bring their songs in from Apple Music from their page.
+
+### An album in my playlist won't play
+
+Playlists play through Apple Music's catalog. Albums in your library that aren't on Apple Music, such as your own CD rips, can be added but can't be played from the app.
+
 ### Where did Settings go?
 
 Settings opens from the gear at the top of the **Data** tab. Recording, imports and exports are on the Data tab itself.

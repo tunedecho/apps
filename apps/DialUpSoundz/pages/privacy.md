@@ -8,13 +8,13 @@ DialUpSoundz is made by Tuned Echo Systems LLC. In short: your music data stays 
 
 ## What the app uses
 
-**Apple Music.** When you allow it, DialUpSoundz uses Apple Music to search the catalog, play songs, and save playlists to your library. It also reads your library's play counts, skip counts and recently played items so it can record your listening history. These requests go to Apple, and Apple's [privacy policy](https://www.apple.com/legal/privacy/) covers them.
+**Apple Music.** When you allow it, DialUpSoundz uses Apple Music to search the catalog, play songs, and save playlists to your library, or update the ones it saved there. It also reads your library's play counts, skip counts and recently played items so it can record your listening history. When you ask, it reads the library playlists you choose to import, and searches your library's albums and songs to add to a playlist. It never changes playlists it didn't make. These requests go to Apple, and Apple's [privacy policy](https://www.apple.com/legal/privacy/) covers them.
 
 **Purchases.** The Data Layer is a one-time in-app purchase handled by Apple. The app asks the App Store whether your Apple Account has bought it. Tuned Echo Systems never sees your payment details, and Apple's privacy policy covers the purchase.
 
 **Your listening history and ratings.** The app stores these in a database on your iPhone:
 - the plays it records, and any play activity file you import
-- the playlists you make, and your Listen Later list
+- your playlists, with their songs and albums, whether you made them here or imported them, and your Listen Later lists
 - the ratings, tags and liner notes you add, including for music that isn't on Apple Music
 - the albums and songs you mark "haven't heard"
 - the Operator's notes and research you keep from your chat app

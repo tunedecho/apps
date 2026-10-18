@@ -4,7 +4,7 @@ eyebrow: About
 
 ## Where it's headed
 
-Making playlists from a conversation in your chat app is the part that works well today. It works with chat assistants like Claude, ChatGPT and Gemini. The bigger goal is a personal layer over Apple Music: a record of what you listen to and what you think of it, and your own ways to explore it. Your listening history, ratings and tags, research notes, and recommendations from the Operator are already there. The history and charts are early and still growing.
+Making playlists from a conversation in your chat app is the part that works well today. It works with chat assistants like Claude, ChatGPT and Gemini. The bigger goal is a personal layer over Apple Music: a record of what you listen to and what you think of it, and your own ways to explore it. Your listening history, ratings and tags, your own playlists of songs and albums, research notes, and recommendations from the Operator are already there. The history and charts are early and still growing.
 
 ## Free and paid
 

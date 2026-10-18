@@ -3,6 +3,46 @@ title: Changelog
 description: What's new in each version of DialUpSoundz.
 ---
 
+## 0.15.1 · In development
+
+- **Add songs or albums** from a playlist's page: search Apple Music or your library, and tap + to add.
+
+## 0.15.0 · In development
+
+- Playlists can hold **whole albums** as well as songs. Add one from an album's page; it plays as the album.
+- See any playlist **by album**: songs are grouped by the album they're from.
+
+## 0.14.1 · In development
+
+- Rating cards have **Preview** and **Play**, to remind you how something sounds, and an option to preview each card as it arrives.
+- The first card no longer waits to load.
+
+## 0.14.0 · In development
+
+- The Made tab is now **Playlists**: playlists saved from a list, imported from Apple Music, or built here.
+- **Playlist tags:** put a song in a playlist, or take it out, from its page.
+- **Import your Apple Music playlists**, choosing which. The originals aren't changed.
+- **Save or update** a playlist in Apple Music when you want.
+- **Ask the Operator for one like this:** hand it a playlist with your ratings and get a new one in the same spirit.
+
+## 0.13.0 · In development
+
+- Combine tags to filter your ratings, matching all of them or any, and play or save the result.
+
+## 0.12.0 · In development
+
+- **Play a tag** like a playlist, make it into an Apple Music playlist, or save it to Listen Later as a list. Loved and 5 stars work the same way.
+
+## 0.11.0 · In development
+
+- Listen Later has a **Lists** view: your lists, and your playlists, each opening to play it in order or make it into an Apple Music playlist.
+
+## 0.10.0 · In development
+
+- **Save all to Listen Later** from a playlist draft, or swipe a song to save just that one.
+- Lists you save from become **lists** in Listen Later.
+- Rate what you've heard: **Listened, from Listen Later** in rate mode.
+
 ## 0.9.0 · In development
 
 - DialUpSoundz now speaks of your chat app rather than one brand: it works with chat assistants like Claude, ChatGPT and Gemini. Pick yours in **Settings › Your chat app**, and the Open buttons go to it.

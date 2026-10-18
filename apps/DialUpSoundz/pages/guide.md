@@ -57,13 +57,29 @@ Making playlists and album lists is free. A one-time **Data Layer** unlock adds 
 - **Most played:** the music you've played most and haven't rated, filterable by decade or genre.
 - **Your library:** saved albums you haven't rated.
 - **An artist:** their albums in release order, or their top songs.
+- **Listened, from Listen Later:** what you've marked heard and haven't rated.
 - **Search Apple Music:** anything else.
 
-On each card, tap the stars, love it or mark it **not for me**, tap your tags, add liner notes, then tap **Next**. To go faster, turn off **Options › Show tags and liner notes**, and a star saves and moves on. **Haven't heard** takes it out of the queue.
+On each card, tap the stars, love it or mark it **not for me**, tap your tags, add liner notes, then tap **Next**. To go faster, turn off **Options › Show tags and liner notes**, and a star saves and moves on. **Haven't heard** takes it out of the queue. **Preview** plays a 30-second clip to remind you how it sounds, and **Play** plays it in full; **Options** can preview each card as it arrives.
 
 **Your tags** are offered every time you rate. Edit them in **Options › Edit your tags**, or **Rated › More › Manage tags**: add, reorder, rename or merge.
 
 You can also rate from any album or song page, and in **Listen Later**: tap the circle when you've heard something, and the app asks how it was.
+
+## Playlists
+
+The **Playlists** tab holds every playlist you save from a list. With the Data Layer it becomes your own layer of playlists:
+
+- **Playlist tags:** every song and album page has a **Playlists** row. Tap a playlist to put it in, tap again to take it out.
+- **Add from the playlist:** **Add songs or albums** searches Apple Music or your library. Tap + to add.
+- **Songs and albums:** a playlist can hold whole albums, which play as the album. Switch any playlist to **Albums** to see it grouped by album.
+- **Import from Apple Music:** **Playlists › + › Import from Apple Music** copies the playlists you pick into the app. The originals aren't changed.
+- **Save to Apple Music** puts a playlist in your library, and **Update in Apple Music** refreshes that copy later. Albums go in as their songs, because Apple Music playlists hold songs only.
+- **Ask the Operator for one like this** copies a prompt with the playlist and your ratings of it, for a new playlist in the same spirit.
+
+## Listen Later
+
+Save albums and songs to hear later, one at a time, or with **Save all to Listen Later** from a playlist draft or album list. Each list you save from becomes a list in **Later › Lists**, where you can play it in order, make it into a playlist, or rename it. Long-press an item to move it between lists, and tap its circle once you've heard it.
 
 ## Ask the Operator
 
@@ -91,8 +107,8 @@ The summary, facts, what to listen for and what to hear next are kept with that 
 The **Data** tab is everything the app has built up:
 
 - **Browse:** your listening history by artist, album or song. Tap one to play or rate it.
-- **Explore:** loved and 5-star lists, tags, Operator's notes, charts, and the JSON underneath.
-- **Export everything:** your plays, ratings, Listen Later, playlists and notes as one JSON file, to keep or use elsewhere.
+- **Explore:** loved and 5-star lists, tags, Operator's notes, charts, and the JSON underneath. Any of these plays like a playlist. Tap tags to combine them, matching all of them or any, then play the result, make it a playlist, or save it to Listen Later.
+- **Export everything:** your plays, ratings, Listen Later, playlists with their songs and albums, and notes as one JSON file, to keep or use elsewhere.
 - **Import an export:** bring an export back, to move to a new iPhone or restore a backup. Anything already there isn't duplicated.
 
 ## Bring in your past listening
