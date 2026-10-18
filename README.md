@@ -84,12 +84,18 @@ To link a new app, add a `source` block to its `app.json`, and copy `.claude/ski
 
 Add a new store or tighten a rule there, and every app is checked against it.
 
-## Analytics
+## Analytics and cookies
 
 Every page carries the Google Analytics tag set in `site/site.json` (`googleTagId`):
 - Generated pages get it from the shared layout in `site/templates.mjs`.
-- A hand-written `index.html` gets it added by the build if it's missing.
+- A hand-written `index.html` gets it added by the build.
 - The build fails if any page is missing it. The exception is the lowercase redirect stubs, which forward instantly and would count each visit twice.
+
+Cookie consent for Europe:
+- The tag sets Google's consent mode to "denied" for the EU, EEA, UK and Switzerland. Google applies that by IP address, so no analytics cookies are set there until the visitor accepts.
+- `site/consent.js` shows a small banner, with Accept and Decline, only when the browser's time zone is in Europe, and adds "Cookie choices" to the footer. The choice is kept in local storage.
+- Visitors elsewhere see nothing.
+- `site/pages/privacy.md` is the website privacy notice at `/apps/privacy/`. App privacy policies link to it from a "This website" section.
 
 To change the ID, edit `site/site.json`. To turn analytics off, remove the key.
 

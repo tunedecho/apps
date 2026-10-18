@@ -1,10 +1,10 @@
 ---
 title: Privacy policy
 description: How DialUpSoundz handles your data. Your listening history stays on your iPhone.
-updated: October 17, 2026
+updated: October 18, 2026
 ---
 
-DialUpSoundz is made by Tuned Echo Systems LLC. In short: your music data stays on your iPhone. We don't collect it, we don't have accounts, and there are no analytics or ads.
+DialUpSoundz is made by Tuned Echo Systems LLC. In short: your music data stays on your iPhone. We don't collect it, we don't have accounts, and the app has no analytics or ads.
 
 ## What the app uses
 
@@ -38,6 +38,10 @@ Nothing. Tuned Echo Systems doesn't run a server for DialUpSoundz and receives n
 ## If this changes
 
 A future version may let you chat with the Operator inside the app, using your own key for a chat service, stored in your iPhone's keychain. If it does, the app will send that service only what you write and, when you ask, summaries of your listening, never your raw history. This policy will be updated before that version is released.
+
+## This website
+
+This page and the rest of the app pages at tunedecho.com/apps use Google Analytics to count visits and see which pages are read. Google receives information such as the pages you view, your browser and device type, and your approximate location, and sets cookies to tell visits apart. This is separate from the app: {{name}} itself has no analytics. If you're in the EEA, the UK or Switzerland, these cookies are only set if you accept them. See [website privacy](/apps/privacy/) for details and how to change your choice.
 
 ## Contact
 

@@ -14,16 +14,24 @@ const STATUS_LABELS = {
   showcase: 'Project',
 };
 
-/** Google Analytics tag. Goes first in <head> on every page; scripts/build.mjs checks that it's there. */
-export const googleTag = (id) => `<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=${id}"></script>
+// Where analytics cookies wait for consent: the EU, the rest of the EEA, the UK and Switzerland.
+// Google applies this by the visitor's IP address, so it holds even when the banner's guess (site/consent.js) is wrong.
+const CONSENT_REGIONS = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU',
+  'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH'];
+
+/** Google Analytics tag with consent defaults, and the cookie banner script. Goes first in <head> on every page; scripts/build.mjs checks that it's there. */
+export const googleTag = (site) => `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${site.googleTagId}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', region: ${JSON.stringify(CONSENT_REGIONS).replace(/"/g, "'")}});
+  try { if (localStorage.getItem('te-consent') === 'granted') gtag('consent', 'update', {analytics_storage: 'granted'}); } catch (e) {}
   gtag('js', new Date());
 
-  gtag('config', '${id}');
+  gtag('config', '${site.googleTagId}');
 </script>
+<script src="${site.base}/consent.js" data-privacy="${site.base}/privacy/" defer></script>
 `;
 
 export const statusLabel = (app) => app.statusLabel || STATUS_LABELS[app.status];
@@ -39,7 +47,7 @@ function layout({ site, title, description, path, app, icon, body }) {
   return `<!doctype html>
 <html lang="en">
 <head>
-${site.googleTagId ? googleTag(site.googleTagId) : ''}<meta charset="utf-8">
+${site.googleTagId ? googleTag(site) : ''}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
@@ -70,7 +78,7 @@ ${body}
 <div class="wrap">${bars('rule')}</div>
 <footer class="wrap">
   <span>© ${site.year} Tuned Echo Systems LLC</span>
-  <span><a href="${site.base}/">All apps</a> · <a href="${esc(site.home)}">tunedecho.com</a></span>
+  <span><a href="${site.base}/">All apps</a> · <a href="${site.base}/privacy/">Privacy</a><span data-consent-choices hidden> · <button type="button" class="linkish">Cookie choices</button></span> · <a href="${esc(site.home)}">tunedecho.com</a></span>
   <p class="legal">Tuned Echo is a trademark of Tuned Echo Systems LLC. Apple, the Apple logo, Apple Music and iPhone are trademarks of Apple Inc.</p>
 </footer>
 </body>
@@ -169,6 +177,16 @@ export function subPage({ site, app, pages, page, html }) {
     icon,
     body,
   });
+}
+
+export function sitePage({ site, page, html }) {
+  const body = `
+<section class="wrap page-head">
+  <h1>${esc(page.title)}</h1>
+  ${page.updated ? `<p class="updated">Last updated ${esc(page.updated)}</p>` : ''}
+</section>
+<section class="wrap"><div class="prose">${html}</div></section>`;
+  return layout({ site, title: `${page.title} · ${site.title}`, description: page.description || site.lede, path: `${site.base}/${page.name}/`, body });
 }
 
 export function redirectPage(to, origin = '') {

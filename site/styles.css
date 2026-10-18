@@ -146,3 +146,13 @@ footer{padding-block:2rem 3rem;font-size:.9rem;color:var(--muted);display:flex;j
 footer a{text-decoration:none}
 footer a:hover{color:var(--ink)}
 footer .legal{flex-basis:100%;font-size:.8rem}
+
+/* Cookie banner (site/consent.js), shown only to visitors in Europe */
+.consent{position:fixed;left:1rem;bottom:1rem;z-index:10;max-width:min(26rem,calc(100vw - 2rem));display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem;padding:.75rem .9rem;background:var(--paper);border:1px solid var(--rule);border-radius:6px;box-shadow:0 8px 24px -12px rgba(0,0,0,.35);font-size:.85rem;line-height:1.4}
+.consent[hidden]{display:none}
+.consent p{flex:1 1 100%;color:var(--text)}
+.consent a{color:var(--muted)}
+.consent button{font:600 .8rem var(--sans);padding:.35rem .9rem;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.consent button[data-v="granted"]{background:var(--ink);color:var(--bg)}
+.linkish{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.linkish:hover{color:var(--ink)}

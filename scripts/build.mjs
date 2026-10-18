@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
-import { indexPage, appPage, subPage, redirectPage, notFoundPage, googleTag } from '../site/templates.mjs';
+import { indexPage, appPage, subPage, sitePage, redirectPage, notFoundPage, googleTag } from '../site/templates.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outArg = process.argv.indexOf('--out');
@@ -25,7 +25,12 @@ marked.use({
   },
 });
 
-const STATUSES =['available', 'beta', 'coming-soon', 'showcase'];
+// Every page must carry the Google tag with its consent defaults; this marks the full snippet.
+const CONSENT_MARK = '/consent.js';
+// Folder names under apps/ that site-level files and pages already use.
+const RESERVED = new Set(['assets', 'privacy', 'styles.css', 'consent.js', '404.html', 'index.html']);
+
+const STATUSES = ['available', 'beta', 'coming-soon', 'showcase'];
 // Standard pages: their default titles and order in the sub-navigation. Other Markdown files in pages/ come after.
 const STANDARD_PAGES = { guide: 'Guide', changelog: 'Changelog', privacy: 'Privacy policy', support: 'Support' };
 
@@ -84,6 +89,7 @@ function validate({ app, pages }) {
   if (app.source && !(app.source.repo && /^[0-9a-f]{7,40}$/.test(app.source.syncedCommit || ''))) {
     problems.push('"source" needs "repo" and a "syncedCommit" SHA (see .claude/skills/sync-app/SKILL.md)');
   }
+  if (RESERVED.has(app.slug.toLowerCase())) problems.push(`"${app.slug}" is used by the site itself; pick another folder name`);
   if (!/^[A-Za-z0-9][A-Za-z0-9-]*$/.test(app.slug)) problems.push('folder name may only use letters, numbers and hyphens');
 
   for (const store of app.stores || []) {
@@ -137,14 +143,23 @@ if (failed) process.exit(1);
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
 fs.copyFileSync(path.join(root, 'site/styles.css'), path.join(out, 'styles.css'));
+fs.copyFileSync(path.join(root, 'site/consent.js'), path.join(out, 'consent.js'));
 fs.cpSync(path.join(root, 'site/assets'), path.join(out, 'assets'), { recursive: true });
+
+// Site-level pages from site/pages/*.md, e.g. the website privacy notice at /apps/privacy/.
+const sitePages = fs.readdirSync(path.join(root, 'site/pages')).filter((f) => f.endsWith('.md'));
+for (const f of sitePages) {
+  const { data, body } = parseMarkdown(fs.readFileSync(path.join(root, 'site/pages', f), 'utf8'));
+  const page = { ...data, name: f.slice(0, -3), title: data.title || f.slice(0, -3) };
+  write(`${page.name}/index.html`, sitePage({ site, page, html: marked.parse(body) }));
+}
 
 const ORDER = { available: 0, beta: 1, 'coming-soon': 2, showcase: 3 };
 const apps = loaded.map((e) => e.app).sort((a, b) => (a.order ?? 99) - (b.order ?? 99) || ORDER[a.status] - ORDER[b.status] || a.name.localeCompare(b.name));
 write('index.html', indexPage({ site, apps }));
 write('404.html', notFoundPage({ site, apps }));
 
-let count = 2;
+let count = 2 + sitePages.length;
 for (const { app, pages, index } of loaded) {
   copyAssets(app.dir, path.join(out, app.slug));
 
@@ -152,9 +167,11 @@ for (const { app, pages, index } of loaded) {
   if (fs.existsSync(custom)) {
     let html = fs.readFileSync(custom, 'utf8');
     // Hand-written pages get the Google tag too, unless they already have it.
-    if (site.googleTagId && !html.includes(`gtag/js?id=${site.googleTagId}`)) {
-      if (!/<head[^>]*>/i.test(html)) { console.error(`✗ ${app.slug}: index.html has no <head> to put the Google tag in`); process.exit(1); }
-      html = html.replace(/<head[^>]*>/i, (m) => `${m}\n${googleTag(site.googleTagId)}`);
+    if (site.googleTagId && !html.includes(CONSENT_MARK)) {
+      const fail = (why) => { console.error(`✗ ${app.slug}: index.html ${why}`); process.exit(1); };
+      if (html.includes('googletagmanager.com/gtag')) fail('has its own Google tag. Remove it; the build adds the tag with cookie consent.');
+      if (!/<head[^>]*>/i.test(html)) fail('has no <head> to put the Google tag in');
+      html = html.replace(/<head[^>]*>/i, (m) => `${m}\n${googleTag(site)}`);
     }
     write(`${app.slug}/index.html`, html);
   } else {
@@ -193,13 +210,14 @@ if (site.googleTagId) {
       if (e.isDirectory()) walk(p);
       else if (e.name.endsWith('.html')) {
         const html = fs.readFileSync(p, 'utf8');
-        if (!html.includes('http-equiv="refresh"') && !html.includes(`gtag/js?id=${site.googleTagId}`)) missing.push(path.relative(out, p));
+        const tagged = html.includes(`gtag/js?id=${site.googleTagId}`) && html.includes(CONSENT_MARK);
+        if (!html.includes('http-equiv="refresh"') && !tagged) missing.push(path.relative(out, p));
       }
     }
   };
   walk(out);
   if (missing.length) {
-    for (const p of missing) console.error(`✗ ${p}: missing the Google tag (${site.googleTagId})`);
+    for (const p of missing) console.error(`✗ ${p}: missing the Google tag (${site.googleTagId}) with cookie consent`);
     process.exit(1);
   }
 }
