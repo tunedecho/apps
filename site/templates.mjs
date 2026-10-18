@@ -14,6 +14,18 @@ const STATUS_LABELS = {
   showcase: 'Project',
 };
 
+/** Google Analytics tag. Goes first in <head> on every page; scripts/build.mjs checks that it's there. */
+export const googleTag = (id) => `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${id}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${id}');
+</script>
+`;
+
 export const statusLabel = (app) => app.statusLabel || STATUS_LABELS[app.status];
 
 function accentStyle(app) {
@@ -27,7 +39,7 @@ function layout({ site, title, description, path, app, icon, body }) {
   return `<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+${site.googleTagId ? googleTag(site.googleTagId) : ''}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">

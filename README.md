@@ -84,6 +84,15 @@ To link a new app, add a `source` block to its `app.json`, and copy `.claude/ski
 
 Add a new store or tighten a rule there, and every app is checked against it.
 
+## Analytics
+
+Every page carries the Google Analytics tag set in `site/site.json` (`googleTagId`):
+- Generated pages get it from the shared layout in `site/templates.mjs`.
+- A hand-written `index.html` gets it added by the build if it's missing.
+- The build fails if any page is missing it. The exception is the lowercase redirect stubs, which forward instantly and would count each visit twice.
+
+To change the ID, edit `site/site.json`. To turn analytics off, remove the key.
+
 ## Preview and publish
 
 ```sh

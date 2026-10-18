@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
-import { indexPage, appPage, subPage, redirectPage, notFoundPage } from '../site/templates.mjs';
+import { indexPage, appPage, subPage, redirectPage, notFoundPage, googleTag } from '../site/templates.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outArg = process.argv.indexOf('--out');
@@ -150,7 +150,13 @@ for (const { app, pages, index } of loaded) {
 
   const custom = path.join(app.dir, 'index.html');
   if (fs.existsSync(custom)) {
-    fs.copyFileSync(custom, path.join(out, app.slug, 'index.html'));
+    let html = fs.readFileSync(custom, 'utf8');
+    // Hand-written pages get the Google tag too, unless they already have it.
+    if (site.googleTagId && !html.includes(`gtag/js?id=${site.googleTagId}`)) {
+      if (!/<head[^>]*>/i.test(html)) { console.error(`✗ ${app.slug}: index.html has no <head> to put the Google tag in`); process.exit(1); }
+      html = html.replace(/<head[^>]*>/i, (m) => `${m}\n${googleTag(site.googleTagId)}`);
+    }
+    write(`${app.slug}/index.html`, html);
   } else {
     const shotsDir = path.join(app.dir, 'screenshots');
     const screenshots = fs.existsSync(shotsDir)
@@ -175,6 +181,26 @@ for (const { app, pages, index } of loaded) {
   if (lc !== app.slug && !fs.existsSync(path.join(out, lc))) {
     write(`${lc}/index.html`, redirectPage(`${site.base}/${app.slug}/`, site.url));
     for (const page of pages) write(`${lc}/${page.name}/index.html`, redirectPage(`${site.base}/${app.slug}/${page.name}/`, site.url));
+  }
+}
+
+// Every page except redirects must carry the Google tag.
+if (site.googleTagId) {
+  const missing = [];
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (e.name.endsWith('.html')) {
+        const html = fs.readFileSync(p, 'utf8');
+        if (!html.includes('http-equiv="refresh"') && !html.includes(`gtag/js?id=${site.googleTagId}`)) missing.push(path.relative(out, p));
+      }
+    }
+  };
+  walk(out);
+  if (missing.length) {
+    for (const p of missing) console.error(`✗ ${p}: missing the Google tag (${site.googleTagId})`);
+    process.exit(1);
   }
 }
 

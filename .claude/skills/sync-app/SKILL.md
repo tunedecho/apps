@@ -89,7 +89,7 @@ Change only what the diff supports. Leave everything else as it is.
    - `syncedCommit` is the full SHA of `H`.
    - `syncedAt` is today.
    - `version` is the app version from step 3.
-2. `npm ci && npm run build`. Fix anything the requirements check reports.
+2. `npm ci && npm run build`. Fix anything the requirements check or the Google tag check reports. Every page must carry the tag (see `CLAUDE.md`).
 3. For changes beyond text, preview with `npm run dev` and look at the changed pages, in light and dark mode and at phone width.
 4. Commit on `main`, with a message like `Sync DialUpSoundz pages to e7e6006 (0.1.0)`. Summarize the user-facing changes in the body, then push. The deploy workflow publishes on push. Check that its run succeeded.
 
