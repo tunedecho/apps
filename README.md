@@ -117,7 +117,7 @@ On macOS, local builds skip the lowercase redirect folders, because the file sys
 | `apps/` | One folder per app. |
 | `site/styles.css` | Shared styles, with the design tokens from tunedecho.com at the top. |
 | `site/templates.mjs` | The HTML for the index, landing, page, redirect and 404 pages. |
-| `site/site.json` | Site address, base path, and the index page's text. |
+| `site/site.json` | Site address, base path, and the index page's text: the hero, the higher-education section (`work`, with its demo request) and the iPhone apps intro (`appsIntro`). |
 | `site/requirements.json` | What each store requires. |
 | `site/defaults/` | Shared Markdown pages used when an app doesn't have its own. |
 | `site/assets/` | The Tuned Echo seal, used as the index favicon. |

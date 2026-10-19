@@ -156,3 +156,14 @@ footer .legal{flex-basis:100%;font-size:.8rem}
 .consent button[data-v="granted"]{background:var(--ink);color:var(--bg)}
 .linkish{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 .linkish:hover{color:var(--ink)}
+
+/* Index: higher-ed work and the demo note */
+.intro{max-width:var(--measure);color:var(--muted);margin-bottom:2.5rem}
+.index-hero + .work{padding-top:clamp(1rem,3vw,2rem)}
+.demo{margin-top:clamp(2.5rem,5vw,3.5rem);border:1.5px dashed var(--rule);background:var(--paper);padding:1.5rem 1.75rem;max-width:var(--measure);display:grid;gap:.75rem;justify-items:start}
+.demo-label{font-family:var(--cond);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.demo p:not(.demo-label){color:var(--muted)}
+.card h3{font-size:1.75rem;margin:0 0 .35rem;line-height:1.1}
+.card h3 a{text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

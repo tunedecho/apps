@@ -116,22 +116,42 @@ export function indexPage({ site, apps }) {
     <li class="card" style="--accent:${esc(app.accent || 'var(--ink)')}">
       <img class="card-icon" src="${site.base}/${app.slug}/icon.png" alt="" width="72" height="72" loading="lazy">
       <div>
-        <h2><a href="${site.base}/${app.slug}/">${esc(app.name)}</a></h2>
+        <h3><a href="${site.base}/${app.slug}/">${esc(app.name)}</a></h3>
         <p>${esc(app.tagline)}</p>
         ${STATUS_LABELS[app.status] && app.status !== 'showcase' ? `<span class="status small">${esc(STATUS_LABELS[app.status])}</span>` : ''}
       </div>
     </li>`).join('');
+  const { work, appsIntro } = site;
+  const workItems = (work?.items || []).map((w, i) => `
+      <li class="feature"><span class="dot" style="background:var(--${BAR_COLORS[i % BAR_COLORS.length]})"></span><h3>${esc(w.title)}</h3><p>${esc(w.body)}</p></li>`).join('');
+  const demoHref = work?.demoEmail ? `mailto:${work.demoEmail}?subject=${encodeURIComponent('Demo request')}` : '';
   const body = `
 <section class="wrap index-hero">
   <h1 class="wordmark"><span class="wm-text">Tuned <em>Echo</em> Apps</span>${bars('bars')}</h1>
   <p class="tagline">${esc(site.tagline)}</p>
   <p class="lede">${esc(site.lede)}</p>
+  ${demoHref ? `<div class="cta"><a class="btn primary" href="${esc(demoHref)}">Request a demo</a>${work.methodLink ? `<a class="btn ghost" href="${esc(work.methodLink)}">How we work</a>` : ''}</div>` : ''}
 </section>
-<section class="wrap" style="padding-top:0">
+${work ? `<section class="wrap work" aria-labelledby="work-h">
+  <p class="eyebrow">${esc(work.eyebrow)}</p>
+  <h2 id="work-h">${esc(work.heading)}</h2>
+  ${work.intro ? `<p class="intro">${esc(work.intro)}</p>` : ''}
+  <ul class="features">${workItems}
+  </ul>
+  ${work.demoBody ? `<div class="demo">
+    <p class="demo-label">${esc(work.demoHeading || 'Demos by request')}</p>
+    <p>${esc(work.demoBody)}</p>
+    ${demoHref ? `<p><a class="btn primary" href="${esc(demoHref)}">Request a demo</a></p>` : ''}
+  </div>` : ''}
+</section>` : ''}
+<section class="${work ? 'alt' : ''}" aria-labelledby="apps-h"><div class="wrap">
+  ${appsIntro ? `<p class="eyebrow">${esc(appsIntro.eyebrow)}</p>
+  <h2 id="apps-h">${esc(appsIntro.heading)}</h2>
+  <p class="intro">${esc(appsIntro.body)}</p>` : '<h2 id="apps-h" class="visually-hidden">Apps</h2>'}
   <ul class="cards">${cards}
   </ul>
-</section>`;
-  return layout({ site, title: site.title, description: site.lede, path: site.base + '/', body });
+</div></section>`;
+  return layout({ site, title: site.title, description: site.description || site.lede, path: site.base + '/', body });
 }
 
 export function appPage({ site, app, pages, contentHtml, contentHeading, screenshots }) {
@@ -194,7 +214,7 @@ export function sitePage({ site, page, html }) {
   ${page.updated ? `<p class="updated">Last updated ${esc(page.updated)}</p>` : ''}
 </section>
 <section class="wrap"><div class="prose">${html}</div></section>`;
-  return layout({ site, title: `${page.title} · ${site.title}`, description: page.description || site.lede, path: `${site.base}/${page.name}/`, body });
+  return layout({ site, title: `${page.title} · ${site.title}`, description: page.description || site.description, path: `${site.base}/${page.name}/`, body });
 }
 
 export function redirectPage(to, origin = '') {
@@ -235,5 +255,5 @@ export function notFoundPage({ site, apps }) {
   if (to !== path) location.replace(to + location.search + location.hash);
 })();
 </script>`;
-  return layout({ site, title: `Not found · ${site.title}`, description: site.lede, path: `${site.base}/404.html`, body });
+  return layout({ site, title: `Not found · ${site.title}`, description: site.description, path: `${site.base}/404.html`, body });
 }

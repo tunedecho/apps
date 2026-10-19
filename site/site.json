@@ -4,6 +4,51 @@
   "home": "https://tunedecho.com/",
   "googleTagId": "G-XQEPE1KZTT",
   "title": "Apps · Tuned Echo",
-  "tagline": "Small, focused apps, each built to do one job well.",
-  "lede": "Apps made by Tuned Echo Systems."
+  "tagline": "Working software for the processes higher education runs on.",
+  "lede": "Tuned Echo Systems builds prototype software for colleges and universities: custom tools for the niche processes that enterprise platforms never reach, working in weeks. Further down are a few iPhone apps, made the same way.",
+  "description": "Custom prototype software for higher education, and iPhone apps for productivity and music, from Tuned Echo Systems.",
+  "work": {
+    "eyebrow": "Higher education",
+    "heading": "Built for the work no vendor will touch.",
+    "intro": "We've built working custom software for processes like these, each one starting from how a real department actually does the work.",
+    "items": [
+      {
+        "title": "Faculty and adjunct scheduling",
+        "body": "A whole-department dashboard for staffing a large schedule: who teaches what and when, under which appointment, with conflicts and coverage tracked in one place."
+      },
+      {
+        "title": "Union-mandated processes",
+        "body": "Record keeping and tracking dashboards for internal processes set by collective bargaining agreements, so every step, deadline and document is accounted for."
+      },
+      {
+        "title": "Academic assessment",
+        "body": "A customized assessment warehouse and coordination tools: outcomes, evidence and reports gathered across programs, with the follow-up tracked."
+      },
+      {
+        "title": "Budget analysis",
+        "body": "Department and college budget tools that show their arithmetic, so every figure in a roll-up can be traced to where it came from."
+      },
+      {
+        "title": "Course management",
+        "body": "Course management systems shaped around how a department plans, offers and reviews its own courses."
+      },
+      {
+        "title": "LMS integration",
+        "body": "Integration tools that connect the learning management system you already subscribe to with the records and workflows around it."
+      },
+      {
+        "title": "Bulletin creation and analysis",
+        "body": "Tools to build the academic bulletin from structured data, publish it consistently, and analyze programs and requirements across it."
+      }
+    ],
+    "demoHeading": "Demos by request",
+    "demoBody": "These systems deal with sensitive institutional work, so the demos aren't public. Each runs on invented data, so nothing real is ever shown. Ask, and we'll walk you through the one closest to your setting.",
+    "demoEmail": "info@tunedecho.com",
+    "methodLink": "https://tunedecho.com/#method"
+  },
+  "appsIntro": {
+    "eyebrow": "Apps for iPhone",
+    "heading": "The same principles, in everyday tools.",
+    "body": "Tuned Echo also makes apps for personal productivity and making music. They come from the same habits as the institutional work: start from how the task really happens, keep your data with you, show how things work, and build small, focused tools instead of one platform for everything."
+  }
 }
