@@ -39,6 +39,10 @@
       {
         "title": "Bulletin creation and analysis",
         "body": "Tools to build the academic bulletin from structured data, publish it consistently, and analyze programs and requirements across it."
+      },
+      {
+        "title": "Email on top of Outlook",
+        "body": "A layer over Outlook for the email a department sends again and again: reusable templates instead of retyped boilerplate, personalized messages sent to whole lists, and the lists themselves kept up to date."
       }
     ],
     "demoHeading": "Demos by request",
