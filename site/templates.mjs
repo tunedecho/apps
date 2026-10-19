@@ -138,7 +138,8 @@ ${work ? `<section class="wrap work" aria-labelledby="work-h">
   ${work.intro ? `<p class="intro">${esc(work.intro)}</p>` : ''}
   <ul class="features">${workItems}
   </ul>
-  ${work.demoBody ? `<div class="demo">
+  ${work.demoBody ? `<hr class="sep">
+  <div class="demo">
     <p class="demo-label">${esc(work.demoHeading || 'Demos by request')}</p>
     <p>${esc(work.demoBody)}</p>
   </div>` : ''}

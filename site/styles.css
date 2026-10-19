@@ -160,7 +160,7 @@ footer .legal{flex-basis:100%;font-size:.8rem}
 /* Index: higher-ed work and the demo note */
 .intro{max-width:var(--measure);color:var(--muted);margin-bottom:2.5rem}
 .index-hero + .work{padding-top:0}
-.demo{margin-top:clamp(3rem,7vw,5rem);border:1.5px dashed var(--rule);background:var(--paper);padding:1.5rem 1.75rem;max-width:var(--measure);display:grid;gap:.75rem;justify-items:start}
+.demo{border:1.5px dashed var(--rule);background:var(--paper);padding:1.5rem 1.75rem;max-width:var(--measure);display:grid;gap:.75rem;justify-items:start}
 .demo-label{font-family:var(--cond);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
 .demo p:not(.demo-label){color:var(--muted)}
 .card h3{font-size:1.75rem;margin:0 0 .35rem;line-height:1.1}
@@ -169,3 +169,5 @@ footer .legal{flex-basis:100%;font-size:.8rem}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* A shaded band at the end of a page needs room before the footer rule */
 main > section.alt:last-child{margin-bottom:clamp(3rem,7vw,5.5rem)}
+.sep{border:0;border-top:1px solid var(--rule);margin:clamp(3rem,7vw,5rem) 0 clamp(2.5rem,5vw,3.5rem)}
+section.alt .intro{margin-bottom:clamp(3rem,6vw,4rem)}
