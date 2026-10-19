@@ -1,7 +1,7 @@
 {
   "name": "Rehearsal Loop",
   "tagline": "Loop any section of a song with one tap, and practice along until you've got it.",
-  "summary": "Play a song from Apple Music or your own library, tap a big button at the start and end of the part you're learning, and Rehearsal Loop plays it over and over. Songs you own can slow down without changing pitch. It plays through your speaker, headphones or AirPlay, and remembers your loop for every song.",
+  "summary": "Play a song from Apple Music or your own library, tap a big button at the start and end of the part you're learning, and Rehearsal Loop plays it over and over. Songs you own can slow down without changing pitch. It plays through your speaker, headphones or AirPlay, and remembers your loop for every song. Rehearsal Loop Pro shows you the notes and chords of the loop, and lets you play along with the band with any part muted.",
   "accent": "#c8762a",
   "accentDark": "#f0a060",
   "status": "coming-soon",
@@ -20,11 +20,11 @@
   "featuresHeading": "Built for practice",
   "features": [
     { "title": "One big button", "body": "Set A, set B, loop on, loop off, all from one button you can hit without looking. Headphone and lock-screen buttons work too." },
-    { "title": "Seamless loops on your own songs", "body": "Songs you bought, ripped or imported loop with no gap at all, even over AirPlay." },
-    { "title": "Apple Music songs too", "body": "Loop anything in Apple Music at normal speed. There's a short gap at the loop point, and downloaded songs loop tighter." },
+    { "title": "Apple Music and your own songs", "body": "Loop anything in Apple Music at normal speed, with a short gap at the loop point. Songs you own and files you import loop with no gap at all, even over AirPlay." },
     { "title": "Slow it down", "body": "Play your own songs from 50 to 150 percent speed without changing pitch, and shift the key by up to 12 semitones if you need to." },
-    { "title": "Fine-tune the points", "body": "Drag a point under a fixed line on the waveform, pinch to zoom, nudge by tiny steps, and listen to just before or after it." },
-    { "title": "AirPlay that lands on the beat", "body": "AirPlay audio runs a couple of seconds behind. Rehearsal Loop allows for that, so your taps land where you heard them." }
+    { "title": "Fine-tune and save loops", "body": "Drag a point under a fixed line on the waveform, pinch to zoom and nudge by tiny steps. With Pro, keep several named loops per song, each with its own tempo." },
+    { "title": "See the notes", "body": "Pro shows the loop's key, chords and notes as sheet music, tab or a piano roll, written for your instrument. Fix any note, hear it back, and share it as MusicXML or MIDI. Apple Music loops work by listening through the microphone." },
+    { "title": "Play along with the band", "body": "Pro splits the loop into vocals, drums, bass, guitar, piano and the rest, right on your iPhone. Mute your part and play it yourself, or solo it to hear it clearly. For songs you own." }
   ],
   "source": {
     "repo": "CrumpLabSandbox/MusicStreamRepeater",

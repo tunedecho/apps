@@ -35,3 +35,27 @@ The app allows for AirPlay's delay on songs you own. On Apple Music songs it can
 ### There's no pitch control
 
 Turn on **Show pitch control** in **Settings**. It only works on songs you own.
+
+### Where are the files I imported?
+
+In the Files app, under **On My iPhone**, in the Rehearsal Loop folder. You can add files there too, and they'll appear in **Songs** under **Your files**.
+
+### Some buttons have a PRO tag
+
+Saved loops, transcription and play along are part of Rehearsal Loop Pro, a one-time purchase. Everything else is free. Tap a button with the tag to see what Pro includes.
+
+### I bought Pro but it's locked
+
+Go to **Settings** and tap **Restore Purchases**, signed in to the Apple Account you bought it with. If someone in your Family Sharing group bought it, check that purchase sharing is on. If a parent has to approve the purchase, Pro unlocks as soon as they do.
+
+### The transcription has wrong notes
+
+Transcribing music by ear is hard, for apps too, so treat the result as a first draft. Pick the part you want under **Parts to transcribe** rather than the full mix, check the bar count, and fix single notes in the piano roll. Fast runs, bends and slides are the hardest, and distorted guitar in a busy mix is harder than a clear vocal or horn line.
+
+### Recording an Apple Music loop doesn't pick anything up
+
+The microphone can only hear sound that's playing out loud. Switch from headphones to the iPhone's speaker or a speaker in the room, turn it up, and check that Rehearsal Loop is allowed to use the microphone, in the Settings app under Rehearsal Loop.
+
+### Play along says "Owned songs only"
+
+Splitting a song into parts needs its audio, and apps can't read the audio of Apple Music songs. Play along works with songs you own and files you've imported.
