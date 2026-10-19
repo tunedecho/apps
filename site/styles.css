@@ -167,3 +167,5 @@ footer .legal{flex-basis:100%;font-size:.8rem}
 .card h3 a{text-decoration:none}
 .card h3 a::after{content:"";position:absolute;inset:0}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* A shaded band at the end of a page needs room before the footer rule */
+main > section.alt:last-child{margin-bottom:clamp(3rem,7vw,5.5rem)}
