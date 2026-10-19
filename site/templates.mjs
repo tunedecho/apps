@@ -31,7 +31,7 @@ export const googleTag = (site) => `<!-- Google tag (gtag.js) -->
 
   gtag('config', '${site.googleTagId}');
 </script>
-<script src="${site.base}/consent.js" data-privacy="${site.base}/privacy/" defer></script>
+<script src="${site.base}/consent.js?v=${site.assetVersion || 1}" data-privacy="${site.base}/privacy/" defer></script>
 `;
 
 export const statusLabel = (app) => app.statusLabel || STATUS_LABELS[app.status];
@@ -68,7 +68,7 @@ ${site.googleTagId ? googleTag(site) : ''}<meta charset="utf-8">
 ${icon ? `<meta property="og:image" content="${esc(site.url + icon)}">\n<link rel="icon" href="${esc(icon)}">\n<link rel="apple-touch-icon" href="${esc(icon)}">` : `<link rel="icon" href="${site.base}/assets/seal.svg" type="image/svg+xml">`}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Oswald:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="${site.base}/styles.css">
+<link rel="stylesheet" href="${site.base}/styles.css?v=${site.assetVersion || 1}">
 ${accentStyle(app)}
 </head>
 <body>

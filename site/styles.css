@@ -170,4 +170,4 @@ footer .legal{flex-basis:100%;font-size:.8rem}
 /* A shaded band at the end of a page needs room before the footer rule */
 main > section.alt:last-child{margin-bottom:clamp(3rem,7vw,5.5rem)}
 .sep{border:0;border-top:1px solid var(--rule);margin:clamp(3rem,7vw,5rem) 0 clamp(2.5rem,5vw,3.5rem)}
-section.alt .intro{margin-bottom:clamp(3rem,6vw,4rem)}
+section.alt .intro{margin-bottom:clamp(4.75rem,8vw,5.75rem)}

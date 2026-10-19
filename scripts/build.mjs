@@ -2,6 +2,7 @@
 // Usage: node scripts/build.mjs [--out _site]
 
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
@@ -14,6 +15,11 @@ const out = path.resolve(root, outArg > -1 ? process.argv[outArg + 1] : '_site')
 const readJSON = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const site = { ...readJSON(path.join(root, 'site/site.json')), year: new Date().getFullYear() };
 const requirements = readJSON(path.join(root, 'site/requirements.json'));
+// Changes whenever the stylesheet or banner script changes, so browsers fetch the new copy instead of a cached one.
+site.assetVersion = crypto.createHash('sha1')
+  .update(fs.readFileSync(path.join(root, 'site/styles.css')))
+  .update(fs.readFileSync(path.join(root, 'site/consent.js')))
+  .digest('hex').slice(0, 10);
 
 // Headings get ids so pages can link to a section, e.g. guide/#bring-in-your-past-listening.
 marked.use({
