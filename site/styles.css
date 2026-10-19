@@ -68,7 +68,7 @@ h3{font-size:1.6rem;line-height:1.1}
 .status.small{padding:.3rem .7rem;font-size:.7rem;letter-spacing:.14em;border-style:solid;border-width:1px}
 
 /* Index */
-.index-hero{padding-block:clamp(3rem,8vw,6rem) clamp(2rem,5vw,3.5rem)}
+.index-hero{padding-block:clamp(3rem,8vw,6rem) clamp(2.75rem,5vw,3.5rem)}
 .index-hero .wm-text{font-size:clamp(3.4rem,9vw,7rem)}
 .cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:1.5rem}
 .card{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.1rem;align-items:start;padding:1.5rem;background:var(--paper);border:1px solid var(--rule-soft);border-top:4px solid var(--accent);border-radius:4px}
@@ -159,8 +159,8 @@ footer .legal{flex-basis:100%;font-size:.8rem}
 
 /* Index: higher-ed work and the demo note */
 .intro{max-width:var(--measure);color:var(--muted);margin-bottom:2.5rem}
-.index-hero + .work{padding-top:clamp(1rem,3vw,2rem)}
-.demo{margin-top:clamp(2.5rem,5vw,3.5rem);border:1.5px dashed var(--rule);background:var(--paper);padding:1.5rem 1.75rem;max-width:var(--measure);display:grid;gap:.75rem;justify-items:start}
+.index-hero + .work{padding-top:0}
+.demo{margin-top:clamp(3rem,7vw,5rem);border:1.5px dashed var(--rule);background:var(--paper);padding:1.5rem 1.75rem;max-width:var(--measure);display:grid;gap:.75rem;justify-items:start}
 .demo-label{font-family:var(--cond);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
 .demo p:not(.demo-label){color:var(--muted)}
 .card h3{font-size:1.75rem;margin:0 0 .35rem;line-height:1.1}

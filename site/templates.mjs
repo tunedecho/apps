@@ -141,7 +141,6 @@ ${work ? `<section class="wrap work" aria-labelledby="work-h">
   ${work.demoBody ? `<div class="demo">
     <p class="demo-label">${esc(work.demoHeading || 'Demos by request')}</p>
     <p>${esc(work.demoBody)}</p>
-    ${demoHref ? `<p><a class="btn primary" href="${esc(demoHref)}">Request a demo</a></p>` : ''}
   </div>` : ''}
 </section>` : ''}
 <section class="${work ? 'alt' : ''}" aria-labelledby="apps-h"><div class="wrap">
