@@ -1,0 +1,35 @@
+{
+  "name": "Rehearsal Loop",
+  "tagline": "Loop any section of a song with one tap, and practice along until you've got it.",
+  "summary": "Play a song from Apple Music or your own library, tap a big button at the start and end of the part you're learning, and Rehearsal Loop plays it over and over. Songs you own can slow down without changing pitch. It plays through your speaker, headphones or AirPlay, and remembers your loop for every song.",
+  "accent": "#c8762a",
+  "accentDark": "#f0a060",
+  "status": "coming-soon",
+  "platforms": ["iPhone", "iPad"],
+  "requires": "iOS 17 or later · Apple Music or your own music",
+  "links": { "appStore": null, "testFlight": null },
+  "supportEmail": "info@tunedecho.com",
+  "privacy": "custom",
+  "stepsHeading": "Tap, tap, play it again",
+  "steps": [
+    { "title": "Pick a song", "body": "Use whatever's playing in the Music app, or search Apple Music, your playlists and your own songs." },
+    { "title": "Tap at the start", "body": "Hit the big Loop button where the section begins. That's point A." },
+    { "title": "Tap at the end", "body": "Tap again where it ends. That's point B, and the loop starts right away." },
+    { "title": "Practice", "body": "Play along as many times as you need. Tap to pause the loop, tap again to bring it back, or fine-tune either point to the hundredth of a second." }
+  ],
+  "featuresHeading": "Built for practice",
+  "features": [
+    { "title": "One big button", "body": "Set A, set B, loop on, loop off, all from one button you can hit without looking. Headphone and lock-screen buttons work too." },
+    { "title": "Seamless loops on your own songs", "body": "Songs you bought, ripped or imported loop with no gap at all, even over AirPlay." },
+    { "title": "Apple Music songs too", "body": "Loop anything in Apple Music at normal speed. There's a short gap at the loop point, and downloaded songs loop tighter." },
+    { "title": "Slow it down", "body": "Play your own songs from 50 to 150 percent speed without changing pitch, and shift the key by up to 12 semitones if you need to." },
+    { "title": "Fine-tune the points", "body": "Drag a point under a fixed line on the waveform, pinch to zoom, nudge by tiny steps, and listen to just before or after it." },
+    { "title": "AirPlay that lands on the beat", "body": "AirPlay audio runs a couple of seconds behind. Rehearsal Loop allows for that, so your taps land where you heard them." }
+  ],
+  "source": {
+    "repo": "CrumpLabSandbox/MusicStreamRepeater",
+    "syncedCommit": "6059e9fb20942cb4fa2e7ad55414aae53337689d",
+    "syncedAt": "2026-10-19",
+    "version": "0.1.0"
+  }
+}

@@ -1,0 +1,37 @@
+---
+title: Support
+description: Get help with Rehearsal Loop.
+---
+
+## About support
+
+Rehearsal Loop is an experimental app made by one person at Tuned Echo Systems. It's offered as is: I fix what I can, when I can, but I can't promise a reply, a fix, or a timeline.
+
+- **Questions and bug reports:** [{{supportEmail}}](mailto:{{supportEmail}}?subject=Rehearsal%20Loop). Say which iPhone or iPad and iOS version you're using, which song, and what happened.
+- **Things will change.** The app depends on Apple Music, which can change in ways that break something here.
+
+## Common questions
+
+### The tempo slider is greyed out
+
+That song is from Apple Music. Apple doesn't let apps change the speed of most Apple Music songs. Songs you own, such as iTunes purchases, ripped CDs and imported files, can always be slowed down.
+
+### There's a gap where the loop starts again
+
+Apple Music songs loop by jumping back to A, which takes a moment. Downloading the song in the Music app makes the gap smaller. Songs you own loop with no gap.
+
+### Apple Music songs won't play
+
+Check that Rehearsal Loop has access to Apple Music, in the Settings app under Rehearsal Loop, and that your Apple Music subscription is active.
+
+### A song I own plays like an Apple Music song
+
+If the song's file isn't on this device, for example a purchase that's still in iCloud, it plays through Apple Music instead. Download it in the Music app to get full control.
+
+### My taps land late over AirPlay
+
+The app allows for AirPlay's delay on songs you own. On Apple Music songs it can't measure the delay, so tap slightly early, or set the points on the speaker or headphones first, then switch to AirPlay.
+
+### There's no pitch control
+
+Turn on **Show pitch control** in **Settings**. It only works on songs you own.
